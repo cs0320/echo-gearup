@@ -27,11 +27,18 @@ function prepareKeypress() {
     }
 }
 
+// We'll use a global state reference for now
+let pressCount = 0
+function getPressCount() {
+    return pressCount
+}
+
 function handleKeypress(event: KeyboardEvent) {    
     // The event has more fields than just the key pressed (e.g., Alt, Ctrl, etc.)
-    console.log(`key pressed: ${event.key}}`)
+    pressCount = pressCount + 1
+    console.log(`key pressed: ${event.key}. ${getPressCount()} presses seen so far.`)
 }
 
 // Provide this to other modules (e.g., for testing!)
 // The configuration in this project will require /something/ to be exported.
-export {handleKeypress}
+export {handleKeypress, prepareKeypress, getPressCount}
