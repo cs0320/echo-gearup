@@ -1,8 +1,8 @@
 
 // The window.onload callback is invoked when the window is first loaded by the browser
-window.onload = () => {    
-    prepareKeypress()    
-    
+window.onload = () => {
+    prepareKeypress()
+
     // If you're adding an event for a button click, do something similar.
     // The event name in that case is "click", not "keypress", and the type of the element 
     // should be HTMLButtonElement. The handler function for a "click" takes no arguments.
@@ -15,9 +15,9 @@ function prepareKeypress() {
     const maybeInput: Element | null = maybeInputs.item(0)
     // Is the thing there? Is it of the expected type? 
     //  (Remember that the HTML author is free to assign the repl-input class to anything :-) )
-    if(maybeInput == null) {
+    if (maybeInput == null) {
         console.log("Couldn't find input element")
-    } else if(!(maybeInput instanceof HTMLInputElement)) {
+    } else if (!(maybeInput instanceof HTMLInputElement)) {
         console.log(`Found element ${maybeInput}, but it wasn't an input`)
     } else {
         // Notice that we're passing *THE FUNCTION* as a value, not calling it.
@@ -33,7 +33,7 @@ function getPressCount() {
     return pressCount
 }
 
-function handleKeypress(event: KeyboardEvent) {    
+function handleKeypress(event: KeyboardEvent) {
     // The event has more fields than just the key pressed (e.g., Alt, Ctrl, etc.)
     pressCount = pressCount + 1
     console.log(`key pressed: ${event.key}. ${getPressCount()} presses seen so far.`)
@@ -41,4 +41,4 @@ function handleKeypress(event: KeyboardEvent) {
 
 // Provide this to other modules (e.g., for testing!)
 // The configuration in this project will require /something/ to be exported.
-export {handleKeypress, prepareKeypress, getPressCount}
+export { handleKeypress, prepareKeypress, getPressCount }
