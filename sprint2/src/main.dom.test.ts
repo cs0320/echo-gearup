@@ -2,7 +2,7 @@ import '@testing-library/dom'
 import '@testing-library/jest-dom'
 
 /**
- * Resets the Dom before every test
+ * Resets the DOM before every test
  */
 beforeEach(() => {
     // Set up a mock document containing the skeleton that index.html starts with
