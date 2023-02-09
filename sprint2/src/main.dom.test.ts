@@ -19,6 +19,6 @@ beforeEach(() => {
   })
 
 test('repl-input exists', () => {
-    let repl_input : HTMLCollection = document.getElementsByClassName("repl-input")
+    let repl_input : HTMLCollectionOf<Element> = document.getElementsByClassName("repl-input")
     expect(repl_input.length).toBe(1)
 })
