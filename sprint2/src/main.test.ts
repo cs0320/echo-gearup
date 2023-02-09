@@ -17,5 +17,3 @@ test('handleKeypress counting', () => {
   main.handleKeypress(new KeyboardEvent("keypress", { key: "y" }))
   expect(main.getPressCount()).toBe(2)
 })
-
-// TODO: DOM Testing Library test case
