@@ -52,10 +52,10 @@ function REPLInput() {
         <button onClick={() => {  
               setPressCounter(current => current + 1)
           }}
-          aria-label={'Click to run'}>
+          aria-label={`Click to run: ${pressCounter}`}>
           
           {/* The text displayed on the button */}
-          {`Run! (${pressCounter} clicks so far.)`}
+          {`Run! (${pressCounter} clicks so far)`}
         </button>
       </div>
     </div>
