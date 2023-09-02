@@ -27,3 +27,7 @@
 }
 
 /* TODO: Style your new button! */
+.submit-button {
+    margin: auto;
+    display: block;
+}

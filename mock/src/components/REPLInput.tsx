@@ -11,7 +11,10 @@ export function REPLInput() {
     const [commandString, setCommandString] = useState<string>('');
 
     // TODO: How can we keep track of the state of the count for our button?
-  
+    const [pressCounter, setPressCounter] = useState<number>(0);
+    function incrementCounter(){
+      setPressCounter(current => current + 1)
+    }
     /**
      * We suggest breaking down this component into smaller components, think about the individual pieces 
      * of the REPL and how they connect to each other...
@@ -27,6 +30,11 @@ export function REPLInput() {
               <ControlledInput value={commandString} setValue={setCommandString} ariaLabel={"Command input"}/>
             </fieldset>
             {/* TODO: Add a button here that keeps track of the count */}
+            {/* Notice that this uses an external function while the onChange in ControlledInput uses an inline function*/}
+            <button className="submit-button"  onClick={incrementCounter} aria-label={`Click to run: ${pressCounter}`}>
+              {/* The text displayed on the button */}
+              {`Run! (${pressCounter} clicks so far.)`}
+            </button>
         </div>
     );
   }
