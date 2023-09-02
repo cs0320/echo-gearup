@@ -30,4 +30,6 @@ Once cloned:
 `npx playwright test` — Runs tests
 `npx playwright show-report` — Shows a code breakdown of test progressions
 `npx playwright test --ui`— Opens a UI that allows you to watch and trace your (failing) tests live in a browser
-`npx playwright codegen <url>` — Opens a URL and generates tests with locators for elements on the page. NOTE: You still have to document your tests and add assertions.
+`npx playwright codegen <url>` — Opens a URL and generates tests with locators for elements on the page. 
+-> NOTE: You still have to document your tests and add assertions. 
+-> NOTE: If you are using your local server, you must start it before you try to use the codegen command.

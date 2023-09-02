@@ -1,6 +1,9 @@
 import REPL from './components/REPL'
 import './App.css';
 
+/**
+ * This is the highest level component!
+ */
 function App() {
   return (
     <div className="App">
