@@ -1,4 +1,4 @@
-import '../REPL.css';
+import '../styles/main.css';
 import { useState} from 'react';
 import { ControlledInput } from './ControlledInput';
 

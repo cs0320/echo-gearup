@@ -1,4 +1,4 @@
-import '../REPL.css';
+import '../styles/main.css';
 import { REPLInput } from './REPLInput';
 
 /* 
