@@ -1,4 +1,5 @@
-import '../REPL.css';
+import '../styles/main.css';
+import { REPLHistory } from './REPLHistory';
 import { REPLInput } from './REPLInput';
 
 /* 
@@ -11,7 +12,11 @@ import { REPLInput } from './REPLInput';
 */
 export default function REPL() {
   return (
-    <div className="full-REPL">   
+    <div className="repl">  
+      {/*This is where your REPLHistory might go... You also may choose to add it within your REPLInput 
+      component or somewhere else depending on your component organization. What are the pros and cons of each? */}
+      <REPLHistory />
+      <hr></hr>
       <REPLInput />
     </div>
   );
