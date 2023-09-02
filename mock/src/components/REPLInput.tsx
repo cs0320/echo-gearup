@@ -9,6 +9,8 @@ export function REPLInput() {
     
     // What is the contents of the input box?
     const [commandString, setCommandString] = useState<string>('');
+
+    // TODO: How can we keep track of the state of the count for our button?
   
     /**
      * We suggest breaking down this component into smaller components, think about the individual pieces 
@@ -24,6 +26,7 @@ export function REPLInput() {
               <legend>Enter a command:</legend>
               <ControlledInput value={commandString} setValue={setCommandString} ariaLabel={"Command input"}/>
             </fieldset>
+            {/* TODO: Add a button here that keeps track of the count */}
         </div>
     );
   }
