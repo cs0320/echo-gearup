@@ -16,6 +16,7 @@ Once cloned:
 
 ### Setup Mock from root directory
 `cd mock` — Change into the `mock` directory
+
 `npm install` — Installs node_modules folder for dependencies
 
 ### Running Mock
@@ -23,13 +24,20 @@ Once cloned:
 
 ### Setup and run Playwright from root directory
 `cd testing` — Change into the `testing` directory
+
 `npm install` — Installs node_modules folder for dependencies
+
 `npx install playwright` — Installs everything needed to run PlayWright
 
 ### Running tests witih Playwright
 `npx playwright test` — Runs tests
+
 `npx playwright show-report` — Shows a code breakdown of test progressions
+
 `npx playwright test --ui`— Opens a UI that allows you to watch and trace your (failing) tests live in a browser
+
 `npx playwright codegen <url>` — Opens a URL and generates tests with locators for elements on the page. 
+
 -> NOTE: You still have to document your tests and add assertions. 
+
 -> NOTE: If you are using your local server, you must start it before you try to use the codegen command.
