@@ -43,17 +43,9 @@ test('after I type into the input box, its text changes', async ({ page }) => {
 });
 
 test('on page load, i see a button', async ({ page }) => {
-  await page.goto('http://localhost:3000');
-  await expect(page.getByRole('button')).toBeVisible()
+  // TODO: Fill this in once you have a button!
 });
 
-test('after I click the button with label 0, its counter increments', async ({ page }) => {
-  await page.goto('http://localhost:3000');
-  // We can use the ARIA accessible name, instead of label:
-  const name0 = `Click to run: 0`
-  const name1 = `Click to run: 1`
-  await expect(page.getByRole('button', {name: name0})).toBeVisible()
-  await page.getByRole('button', {name: name0}).click()
-  await expect(page.getByRole('button', {name: name1})).toBeVisible()
-  await expect(page.getByRole('button', {name: name0})).not.toBeVisible()
+test('after I click the button, its label increments', async ({ page }) => {
+  // TODO: Fill this in to test your button functionality!
 });

@@ -18,7 +18,6 @@ interface ControlledInputProps {
       <input type="text" className="repl-command-box"
             value={value} 
             onChange={(ev) => setValue(ev.target.value)}
-            placeholder='Input a command here'
             aria-label={ariaLabel}>
       </input>
     );
