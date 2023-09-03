@@ -20,6 +20,7 @@ export default function REPL() {
       <REPLHistory history={history} />
       <hr></hr>
       <REPLInput history={history} setHistory={setHistory} />
+      {/* TODO: Add a button that makes the fetch request */}
     </div>
   );
 }

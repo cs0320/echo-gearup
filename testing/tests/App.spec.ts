@@ -57,3 +57,6 @@ test('after I click the button with label 0, its counter increments', async ({ p
   await expect(page.getByRole('button', {name: name1})).toBeVisible()
   await expect(page.getByRole('button', {name: name0})).not.toBeVisible()
 });
+
+/* Now we are going to add some end to end testing with our trivial backend */
+/* TODO: Test the button you just added! */
