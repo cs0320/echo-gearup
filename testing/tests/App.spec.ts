@@ -43,8 +43,10 @@ test('after I type into the input box, its text changes', async ({ page }) => {
 });
 
 test('on page load, i see a button', async ({ page }) => {
+  const name0 = `Click to run: 0`
+
   await page.goto('http://localhost:3000');
-  await expect(page.getByRole('button')).toBeVisible()
+  await expect(page.getByRole('button', {name: name0})).toBeVisible()
 });
 
 test('after I click the button with label 0, its counter increments', async ({ page }) => {
@@ -60,3 +62,24 @@ test('after I click the button with label 0, its counter increments', async ({ p
 
 /* Now we are going to add some end to end testing with our trivial backend */
 /* TODO: Test the button you just added! */
+
+test('clicking the Fetch and Run buttons increment the counter by 17+1 respectively', async ({ page }) => {
+  const no_increment = `Click to run: 0`
+  const increment_17 = `Click to run: 17`
+  const increment_18 = `Click to run: 18`  
+  
+  await page.goto('http://localhost:3000');
+
+  await expect(page.getByRole('button', {name: no_increment})).toBeVisible()
+
+  // Make a trivial (backend) fetch request
+  await page.getByRole('button', { name: 'Fetch for fun times!' }).click();
+  await expect(page.getByRole('button', {name: no_increment})).not.toBeVisible()
+  await expect(page.getByRole('button', {name: increment_17})).toBeVisible()
+
+  // Make a normal increment with the Run! button
+  await page.getByLabel('Click to run: 17').click();
+  await expect(page.getByRole('button', {name: no_increment})).not.toBeVisible()
+  await expect(page.getByRole('button', {name: increment_17})).not.toBeVisible()
+  await expect(page.getByRole('button', {name: increment_18})).toBeVisible()
+});

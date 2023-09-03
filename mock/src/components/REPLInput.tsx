@@ -48,6 +48,13 @@ export function REPLInput(props: REPLInputProps) {
               {/* The text displayed on the button */}
               {`Run! (${pressCounter} clicks so far.)`}
             </button>
+            {/* TODO: Add a button that makes the fetch request */}
+            <button onClick={ () => {
+              fetch('http://localhost:3232')
+              .then(r => r.json())
+              .then(r => setPressCounter(current => current + r))
+              }}>Fetch for fun times!
+            </button>
         </div>
     );
   }
