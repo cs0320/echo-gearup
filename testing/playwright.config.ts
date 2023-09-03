@@ -77,7 +77,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
     },
     {
-      command: 'cd ../mock/src; node trivial_backend.ts',
+      command: 'cd ../mock/src/backend; node trivial_backend.ts',
       url: 'http://localhost:3232',
       reuseExistingServer: !process.env.CI,
     }
