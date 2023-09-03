@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../styles/main.css';
 import { REPLHistory } from './REPLHistory';
 import { REPLInput } from './REPLInput';
@@ -11,13 +12,14 @@ import { REPLInput } from './REPLInput';
   You don't need to do that for this gearup.
 */
 export default function REPL() {
+  const [history, setHistory] = useState<string[]>([]);
   return (
     <div className="repl">  
       {/*This is where your REPLHistory might go... You also may choose to add it within your REPLInput 
       component or somewhere else depending on your component organization. What are the pros and cons of each? */}
-      <REPLHistory />
+      <REPLHistory history={history} />
       <hr></hr>
-      <REPLInput />
+      <REPLInput history={history} setHistory={setHistory} />
     </div>
   );
 }

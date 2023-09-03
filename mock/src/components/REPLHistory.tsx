@@ -1,9 +1,16 @@
 import '../styles/main.css';
 
-export function REPLHistory() {
+interface REPLHistoryProps {
+    history: string[];
+  }
+
+export function REPLHistory(props: REPLHistoryProps) {
     return (
         <div className="repl-history">
-            {/* This is where command history will go */}
+            {props.history.map((item, index) => (
+                // You may eventually make this a component, but for now it's just a div
+                <div key={index}>{item}</div>
+            ))}
         </div>
     );
 }
