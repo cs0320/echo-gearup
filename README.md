@@ -2,7 +2,7 @@
 
 ## Project code
 
-The `mock` folder was created using our React app setup. It contains the app itself. 
+The `mock` folder was created using Vite app setup. It contains the app itself. The `src` directory contains the main code for the project. The `public` directory might be where you would put images if you needed to use any.
 
 ## Playwright tests
 
