@@ -1,4 +1,4 @@
-# Mock/Echo gearup materials
+# Mock gearup materials
 
 ## Project code
 
