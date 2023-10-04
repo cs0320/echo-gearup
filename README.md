@@ -53,3 +53,7 @@ For the Gear Up, you do not need to worry about this directory.
 
 ## DISCLAIMER
 there is no one right way to build this project, we offer you stencil for a possible start, but feel free to redesign should you choose
+
+
+TODO WITH TA done as demo
+TODO done as exercise

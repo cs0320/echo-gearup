@@ -14,16 +14,9 @@ export function REPLInput(props : REPLInputProps) {
     // Remember: let React manage state in your webapp. 
     // Manages the contents of the input box
     const [commandString, setCommandString] = useState<string>('');
-    // Manages the current amount of times the button is clicked
-    const [count, setCount] = useState<number>(0);
+    // TODO WITH TA : add a count state
     
-    // This function is triggered when the button is clicked.
-    function handleSubmit(commandString:string) {
-      setCount(count+1)
-      // SOL: 
-      // props.setHistory([...props.history, commandString])
-      // setCommandString('')
-    }
+    // TODO WITH TA: build a handleSubmit function called in button onClick
     /**
      * We suggest breaking down this component into smaller components, think about the individual pieces 
      * of the REPL and how they connect to each other...
@@ -38,8 +31,9 @@ export function REPLInput(props : REPLInputProps) {
               <legend>Enter a command:</legend>
               <ControlledInput value={commandString} setValue={setCommandString} ariaLabel={"Command input"}/>
             </fieldset>
+            {/* TODO WITH TA: Build a handleSubmit function that increments count and displays the text in the button */}
             {/* TODO: Currently this button just counts up, can we make it push the contents of the input box to the history?*/}
-            <button onClick={() => handleSubmit(commandString)}>Submitted {count} times</button>
+            <button>Submit</button>
         </div>
     );
   }
