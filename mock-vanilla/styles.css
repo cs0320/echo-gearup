@@ -1,0 +1,24 @@
+#header{
+   text-align: center;
+}
+.repl {
+    position:relative;
+    min-height:95vh;    
+}
+
+.repl-history {      
+    height:65vh;   
+    margin: auto;
+    display: block;
+    overflow: scroll;    
+}
+
+.repl-input {        
+    margin: auto;    
+    height:10vh;
+}
+.repl-command-box {
+    width: 90%;            
+    margin: auto;
+    display: block;
+}
