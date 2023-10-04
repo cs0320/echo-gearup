@@ -27,3 +27,7 @@
 }
 
 /* TODO: Style your new button! */
+button{
+    margin: auto;
+    display: block;
+}
