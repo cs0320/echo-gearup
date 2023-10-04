@@ -43,9 +43,13 @@ test('after I type into the input box, its text changes', async ({ page }) => {
 });
 
 test('on page load, i see a button', async ({ page }) => {
-  // TODO: Fill this in once you have a button!
+  // TODO WITH TA: Fill this in!
 });
 
 test('after I click the button, its label increments', async ({ page }) => {
-  // TODO: Fill this in to test your button functionality!
+  // TODO WITH TA: Fill this in to test your button counter functionality!
+});
+
+test('after I click the button, my command gets pushed', async ({ page }) => {
+  // TODO: Fill this in to test your button push functionality!
 });
