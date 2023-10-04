@@ -4,9 +4,9 @@ import { ControlledInput } from './ControlledInput';
 
 interface REPLInputProps{
   // TODO: Fill this with desired props... Maybe something to keep track of the submitted commands
-  // SOL BELOW
-  // history: string[],
-  // setHistory: Dispatch<SetStateAction<string[]>>,
+  // CHANGED
+  history: string[],
+  setHistory: Dispatch<SetStateAction<string[]>>,
 }
 // You can use a custom interface or explicit fields or both! An alternative to the current function header might be:
 // REPLInput(history: string[], setHistory: Dispatch<SetStateAction<string[]>>)
@@ -20,9 +20,9 @@ export function REPLInput(props : REPLInputProps) {
     // This function is triggered when the button is clicked.
     function handleSubmit(commandString:string) {
       setCount(count+1)
-      // SOL: 
-      // props.setHistory([...props.history, commandString])
-      // setCommandString('')
+      // CHANGED
+      props.setHistory([...props.history, commandString])
+      setCommandString('')
     }
     /**
      * We suggest breaking down this component into smaller components, think about the individual pieces 
