@@ -1,8 +1,12 @@
 # Mock gearup materials
 
-## Project code
+## `mock-vanilla` directory
+This is the codebase for the first part of the gearup. It has a very sparse implementation of our REPL. We'll step through it together to get used to  HTML and CSS, but we will move onto the React project afterwards.
 
-The `mock` folder was created using Vite app setup. It contains the app itself. The `src` directory contains the main code for the project. The `public` directory might be where you would put images if you needed to use any.
+## `mock` directory
+This is the codebase for the latter part of the gearup. This is a TypeScript React project created with Vite setup. The styling is a little bit prettier than the raw HTML/CSS version. We'll use this to work through some exercises with state, event handlers, and Playwright testing. This is a good template to start Mock with once it is filled in from the gearup.
+
+The `components` subdirectory contains all the React components for the project. The `styles` subdirectory contains the CSS files. `main.ts` is a template TypeScript file that shows that .ts and .tsx files can be used in conjunction. `index.tsx` contains renders the root by loading the `App.tsx` file when the `index.html` file is fetched; for your purposes, you should not have to edit it.
 
 ## Playwright tests
 
@@ -19,15 +23,11 @@ Once cloned:
 
 `npm install` — Installs node_modules folder for dependencies
 
+`npx install playwright` — Installs everything needed to run PlayWright
+
 ### Running Mock
 `npm run start` — This starts a local server that compiles your code in real time.
 
-### Setup and run Playwright from root directory
-`cd testing` — Change into the `testing` directory
-
-`npm install` — Installs node_modules folder for dependencies
-
-`npx install playwright` — Installs everything needed to run PlayWright
 
 ### Running tests witih Playwright
 `npx playwright test` — Runs tests
@@ -43,17 +43,7 @@ Once cloned:
 -> NOTE: If you are using your local server, you must start it before you try to use the codegen command.
 
 
-TODO
-## mock-vanilla Directory
-This is a very simple HTML and CSS file. It is provided as a reference for basic HTML style and code convention. In Mock, you will be building a React application, so it may not look *exactly* the same, but the general conventions are similar.
+## Navigating the gearup code.
+All tasks that will be done as "Demos" are labeled as "TODO WITH TA." These will be filled out together. All tasks that are left for you to do with the people around you are labeled with "TODO". 
 
-For the Gear Up, you do not need to worry about this directory.
-
-# fill todos which is to make you push history of the commands
-
-## DISCLAIMER
-there is no one right way to build this project, we offer you stencil for a possible start, but feel free to redesign should you choose
-
-
-TODO WITH TA done as demo
-TODO done as exercise
+The goal of this gearup is to build a REPL with a button that pushes the commands in the input box to the history box. This history box will contain a scrollable list of all the commands. This is challenging and warrants a least a couple of minutes of discussion about design and state management before you dive into it. This management of state will be essential for the project however! While we have a way we are going through in the gearup, note that there are multiple possible ways to do this, and we do not provide the one *correct* way.
