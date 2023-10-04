@@ -31,7 +31,6 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  /* Feel free to comment these in and out to speed up your tests. */
   projects: [
     {
       name: 'chromium',
@@ -71,7 +70,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'cd ..; npm start',
+    command: 'npm start',
     url: 'http://localhost:8000',
     reuseExistingServer: !process.env.CI,
   },
