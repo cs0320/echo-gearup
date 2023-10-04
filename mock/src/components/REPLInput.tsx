@@ -26,7 +26,8 @@ export function REPLInput() {
               <legend>Enter a command:</legend>
               <ControlledInput value={commandString} setValue={setCommandString} ariaLabel={"Command input"}/>
             </fieldset>
-            {/* TODO: Add a button here that keeps track of the count */}
+            {/* TODO: Make this button here keep track of the times clicked */}
+            <button>Submit</button>
         </div>
     );
   }
