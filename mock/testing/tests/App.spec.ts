@@ -23,23 +23,23 @@ test.beforeEach(() => {
  */
 test('on page load, i see an input bar', async ({ page }) => {
   // Notice: http, not https! Our front-end is not set up for HTTPs.
-  await page.goto('http://localhost:3000');
+  await page.goto('http://localhost:8000/');
   await expect(page.getByLabel('Command input')).toBeVisible()
 })
 
 test('after I type into the input box, its text changes', async ({ page }) => {
-    // Step 1: Navigate to a URL
-    await page.goto('http://localhost:3000');
+  // Step 1: Navigate to a URL
+  await page.goto('http://localhost:8000/');
 
-    // Step 2: Interact with the page
-    // Locate the element you are looking for
-    await page.getByLabel('Command input').click();
-    await page.getByLabel('Command input').fill('Awesome command');
+  // Step 2: Interact with the page
+  // Locate the element you are looking for
+  await page.getByLabel('Command input').click();
+  await page.getByLabel('Command input').fill('Awesome command');
 
-    // Step 3: Assert something about the page
-    // Assertions are done by using the expect() function
-    const mock_input = `Awesome command`
-    await expect(page.getByLabel('Command input')).toHaveValue(mock_input)
+  // Step 3: Assert something about the page
+  // Assertions are done by using the expect() function
+  const mock_input = `Awesome command`
+  await expect(page.getByLabel('Command input')).toHaveValue(mock_input)
 });
 
 test('on page load, i see a button', async ({ page }) => {

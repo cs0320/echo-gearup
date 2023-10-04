@@ -71,8 +71,8 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'cd ../mock/; npm start',
-    url: 'http://localhost:3000',
+    command: 'cd ..; npm start',
+    url: 'http://localhost:8000',
     reuseExistingServer: !process.env.CI,
   },
 });
