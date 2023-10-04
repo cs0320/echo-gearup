@@ -1,17 +1,29 @@
 import '../styles/main.css';
-import { useState} from 'react';
+import { Dispatch, SetStateAction, useState} from 'react';
 import { ControlledInput } from './ControlledInput';
 
-// You can also mix the interface (as type) with concrete field names, like this:
-export function REPLInput() {
+interface REPLInputProps{
+  // TODO: Fill this with desired props... Maybe something to keep track of the submitted commands
+  // SOL BELOW
+  // history: string[],
+  // setHistory: Dispatch<SetStateAction<string[]>>,
+}
+// You can use a custom interface or explicit fields or both! An alternative to the current function header might be:
+// REPLInput(history: string[], setHistory: Dispatch<SetStateAction<string[]>>)
+export function REPLInput(props : REPLInputProps) {
     // Remember: let React manage state in your webapp. 
-    // You don't always need the <...> annotation, but I like to include it for clarity.
-    
-    // What is the contents of the input box?
+    // Manages the contents of the input box
     const [commandString, setCommandString] = useState<string>('');
-
-    // TODO: How can we keep track of the state of the count for our button?
+    // Manages the current amount of times the button is clicked
+    const [count, setCount] = useState<number>(0);
     
+    // This function is triggered when the button is clicked.
+    function handleSubmit(commandString:string) {
+      setCount(count+1)
+      // SOL: 
+      // props.setHistory([...props.history, commandString])
+      // setCommandString('')
+    }
     /**
      * We suggest breaking down this component into smaller components, think about the individual pieces 
      * of the REPL and how they connect to each other...
@@ -26,8 +38,8 @@ export function REPLInput() {
               <legend>Enter a command:</legend>
               <ControlledInput value={commandString} setValue={setCommandString} ariaLabel={"Command input"}/>
             </fieldset>
-            {/* TODO: Make this button here keep track of the times clicked */}
-            <button>Submit</button>
+            {/* TODO: Currently this button just counts up, can we make it push the contents of the input box to the history?*/}
+            <button onClick={() => handleSubmit(commandString)}>Submitted {count} times</button>
         </div>
     );
   }
