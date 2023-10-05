@@ -1,7 +1,7 @@
 # Mock gearup materials
 
 ## `mock-vanilla` directory
-This is the codebase for the first part of the gearup. It has a very sparse implementation of our REPL. We'll step through it together to get used to  HTML and CSS, but we will move onto the React project afterwards.
+This is the codebase for the first part of the gearup. It has a very sparse implementation of our REPL. We'll step through it together to get used to  HTML and CSS, but we will move onto the React project afterwards. To run this, right click on the `index.html` file and click "Open with Live Server".
 
 ## `mock` directory
 This is the codebase for the latter part of the gearup. This is a TypeScript React project created with Vite setup. The styling is a little bit prettier than the raw HTML/CSS version. We'll use this to work through some exercises with state, event handlers, and Playwright testing. This is a good template to start Mock with once it is filled in from the gearup.
@@ -26,7 +26,7 @@ Once cloned:
 `npx install playwright` — Installs everything needed to run PlayWright
 
 ### Running Mock
-`npm run start` — This starts a local server that compiles your code in real time.
+`npm start` — This starts a local server that compiles your code in real time.
 
 
 ### Running tests witih Playwright
