@@ -30,7 +30,7 @@ Once cloned:
 
 
 ### Running tests witih Playwright
-`npx playwright test` — Runs tests
+`npm run test` or `npx playwright test` — Runs tests
 
 `npx playwright show-report` — Shows a code breakdown of test progressions
 
