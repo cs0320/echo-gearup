@@ -38,7 +38,7 @@ Once cloned:
 
 `npm run test` — Runs tests
 
-`npm run test:unit`, `npm run test:e2e` - Runs unit and end to end testing respectsively
+`npm run test:unit`, `npm run test:e2e` - Runs unit and end to end testing respectively
 
 `npx playwright show-report` — Shows a code breakdown of test progressions
 
